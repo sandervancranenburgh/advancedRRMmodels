@@ -2,7 +2,7 @@
 
  Sander van Cranenburgh - Associate Professor Delft University of Technology
  
-| [Home]() | [RRM models & software](https://github.com/sandervancranenburgh/advancedRRMmodels/tree/main/RRM%20Models%20%26%20Software/) | [More RRM methodoly](https://github.com/sandervancranenburgh/advancedRRMmodels/More%20RRM%20methodology)  | [Publications](https://github.com/sandervancranenburgh/advancedRRMmodels/Publications) | [MSc projects](https://github.com/sandervancranenburgh/advancedRRMmodels/MSc%20projects) | [About](https://github.com/sandervancranenburgh/advancedRRMmodels/About) | [More](https://github.com/sandervancranenburgh/advancedRRMmodels/More)
+| [Home]() | [RRM models & software](https://github.com/sandervancranenburgh/advancedRRMmodels/tree/main/RRM%20Models%20%26%20Software) | [More RRM methodoly](https://github.com/sandervancranenburgh/advancedRRMmodels/tree/main/RRM%20Methodology)  | [Publications](https://github.com/sandervancranenburgh/advancedRRMmodels) | [MSc projects](https://github.com/sandervancranenburgh/advancedRRMmodels) | [About](https://www.tudelft.nl/tbm/onze-faculteit/engineering-systems-and-services/people/associate-professors/drir-s-sander-van-cranenburgh?0%5BL%5D=&cHash=b2ae04d80d909091b5ba2f09e70b0448) | [More](https://github.com/sandervancranenburgh/advancedRRMmodels)
 --|--|--|--|--|--|--
 
 Hi all,
@@ -28,9 +28,9 @@ Software code is available for commonly software packages:
 -   [LatentGOLD CHOICE](http://www.statisticalinnovations.com/)
 
 
-Under the tab |[More RRM methodology](https://github.com/sandervancranenburgh/advancedRRMmodels/tree/main/RRM%20Methodology/)| you can find recently developed RRM methodology, dealing with:
+Under the tab |[More RRM methodology](https://github.com/sandervancranenburgh/advancedRRMmodels/tree/main/RRM%20Methodology)| you can find recently developed RRM methodology, dealing with:
 
 -   Software for creating robust efficient stated choice experimental designs  (new)
 -   [Profundity of regret](https://github.com/sandervancranenburgh/advancedRRMmodels/tree/main/RRM%20Methodology/Profundity%20of%20regret)
--   [Accounting for variation in choice set size in RRM models](https://github.com/sandervancranenburgh/advancedRRMmodels/tree/main/RRM%20Methodology/)
--   [Robustness of RRM modelling outcomes towards omitted attributes](https://github.com/sandervancranenburgh/advancedRRMmodels/tree/main/RRM%20Methodology/)
+-   [Accounting for variation in choice set size in RRM models](https://github.com/sandervancranenburgh/advancedRRMmodels/tree/main/RRM%20Methodology/Variation%20in%20choice%20set%20size)
+-   [Robustness of RRM modelling outcomes towards omitted attributes](https://github.com/sandervancranenburgh/advancedRRMmodels/tree/main/RRM%20Methodology/Robustness%20of%20RRM%20models)
