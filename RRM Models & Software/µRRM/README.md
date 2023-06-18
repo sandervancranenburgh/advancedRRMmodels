@@ -1,1 +1,30 @@
-include description
+<div id="bgLayers_comp-la7wokve" class="MW5IWV" data-hook="bgLayers">
+<div id="bgMedia_comp-la7wokve" class="VgO9Yg">&nbsp;</div>
+</div>
+<div class="" data-mesh-id="comp-la7wokveinlineContent" data-testid="inline-content">
+<div data-mesh-id="comp-la7wokveinlineContent-gridContainer" data-testid="mesh-container-content">
+<div id="i20bz9jf" class="BaOVQ8 tz5f0K i20bz9jf wixui-rich-text" data-testid="richTextElement">
+<h1 class="font_2 wixui-rich-text__text" style="text-align: center;">The &micro;RRM model</h1>
+</div>
+</div>
+</div>
+<p>The &micro;RRM model generalizes the RRM2010 model by allowing a parameter &micro; &nbsp;to be estimated. This parameter acts as a shape parameter, despite the fact that it&nbsp;is confounded with the scale. The &micro;RRM model has three special cases: 1) the RRM2010 model, 2) the linear-additive RUM model, and 3) the P-RRM model. See<span class="wixui-rich-text__text"><a class="wixui-rich-text__text" href="http://www.sciencedirect.com/science/article/pii/S0965856415000166" target="_blank" rel="noopener">&nbsp;Cranenburgh et al. 2015</a></span>&nbsp;for a more extensive description of this model.</p>
+<p><img src="https://github.com/sandervancranenburgh/advancedRRMmodels/blob/main/RRM%20Models%20%26%20Software/%C2%B5RRM/mu_RRM.png" alt="" /></p>
+<p>By estimating &micro;&nbsp;we essentially estimate the shape of the attribute level regret function. The four plots in the figure below show the different shapes this function can take, depending on the size of &micro;. The size of &micro; is also informative for the degree of regret minimization behaviour imposed by the &micro;RRM model (i.e. profundity of regret). Estimating a relatively large &micro; signals a relatively mild profundity of regret; while, vice versa, estimating a relatively small &micro; signals a relatively strong profundity of regret. Finally, it is important to note that the size of &micro;&nbsp;in the &micro;RRM model is not in any way related to the degree of determinism of the predicted choice behaviour.</p>
+<p><img src="https://github.com/sandervancranenburgh/advancedRRMmodels/blob/main/RRM%20Models%20%26%20Software/%C2%B5RRM/mu_RRM_2.png" alt="" /></p>
+<p class="font_8 wixui-rich-text__text">The figures show that the attribute level regret function can take different shapes. From the left to the right the size of &micro; increases. The outer left plot corresponds with a very small &micro; (i.e. &micro;=0,01); the outer right plot corresponds to a large &micro; (i.e. &micro;=5).</p>
+<p class="font_8 wixui-rich-text__text"><span class="wixGuard wixui-rich-text__text">​</span></p>
+<p class="font_8 wixui-rich-text__text">To interpret the estimated parameters it is useful to compute profundities of regret for each of the taste parameters, denoted &alpha;<span class="wixui-rich-text__text">m</span>. These &alpha;<span class="wixui-rich-text__text">m</span>&nbsp;show how much regret behaviour is imposed with regret to attribute&nbsp;<span class="wixui-rich-text__text">m.&nbsp;</span>Click <a href="https://github.com/sandervancranenburgh/advancedRRMmodels/tree/main/RRM%20Methodology/Profundity%20of%20regret">here</a>&nbsp;to go to the 'Profundity of regret' page.</p>
+
+<h3 class="font_7 wixui-rich-text__text" dir="ltr">MATLAB</h3>
+<p class="font_8 wixui-rich-text__text" dir="ltr">Click&nbsp;<span class="wixui-rich-text__text"><a class="wixui-rich-text__text" href="https://github.com/sandervancranenburgh/advancedRRMmodels/tree/main/RRM%20Models%20%26%20Software/%C2%B5RRM/MATLAB" target="_blank" rel="noopener">here</a></span>&nbsp;for a bundle of MATLAB codes, which includes code to estimate µRRM-MNL models</p>
+<h3 class="font_7 wixui-rich-text__text" dir="ltr">BISON BIOGEME&nbsp;</h3>
+<p class="font_8 wixui-rich-text__text" dir="ltr">Click&nbsp;<span class="wixui-rich-text__text"><a class="wixui-rich-text__text" href="https://github.com/sandervancranenburgh/advancedRRMmodels/tree/main/RRM%20Models%20%26%20Software/%C2%B5RRM/BISON%20BIOGEME" target="_blank" rel="noopener">here</a></span>&nbsp;for BISON BIOGEME µRRM estimation code to estimate shopping choice data.</p>
+<h3 class="font_7 wixui-rich-text__text" dir="ltr">PYTHON BIOGEME</h3>
+<p class="font_8 wixui-rich-text__text" dir="ltr">Click&nbsp;<span class="wixui-rich-text__text"><a class="wixui-rich-text__text" href="https://github.com/sandervancranenburgh/advancedRRMmodels/tree/main/RRM%20Models%20%26%20Software/%C2%B5RRM/PYTHON%20BIOGEME" target="_blank" rel="noopener">here</a></span>&nbsp;for PYTHON BIOGEME µRRM estimation code to estimate shopping choice data.</p>
+<h3 class="font_7 wixui-rich-text__text" dir="ltr">PANDAS BIOGEME</h3>
+<p class="font_8 wixui-rich-text__text" dir="ltr">Click&nbsp;<span class="wixui-rich-text__text"><a class="wixui-rich-text__text" href="https://github.com/sandervancranenburgh/advancedRRMmodels/tree/main/RRM%20Models%20%26%20Software/%C2%B5RRM/PANDAS%20BIOGEME" target="_blank" rel="noopener">here</a></span>&nbsp;for PANDAS BIOGEME µRRM estimation code to estimate shopping choice data.</p>
+<h3 class="font_8 wixui-rich-text__text">Apollo R</h3>
+<p class="font_8 wixui-rich-text__text" dir="ltr">Click&nbsp;<span class="wixui-rich-text__text"><a class="wixui-rich-text__text" href="https://github.com/sandervancranenburgh/advancedRRMmodels/tree/main/RRM%20Models%20%26%20Software/%C2%B5RRM/Apollo%20R" target="_blank" rel="noopener">here</a></span>&nbsp;for Apollo R&nbsp;µRRM estimation code to estimate shopping choice data.</p>
+<h3 class="font_8 wixui-rich-text__text">EXAMPLE DATA FILE</h3>
+<p class="font_8 wixui-rich-text__text" dir="ltr">Click&nbsp;<span class="wixui-rich-text__text"><a class="wixui-rich-text__text" href="https://github.com/sandervancranenburgh/advancedRRMmodels/tree/main/RRM%20Models%20%26%20Software/%C2%B5RRM/EXAMPLE%20DATA" target="_blank" rel="noopener">here</a></span>&nbsp;to download the example shopping choice data file&nbsp;(see&nbsp;<span class="wixui-rich-text__text"><a class="wixui-rich-text__text" href="http://journals.ama.org/doi/abs/10.1509/jmkr.42.1.109.56884" target="_blank" rel="noopener">Arentze et al. 2005</a></span>&nbsp;for more details on the data)</p>
