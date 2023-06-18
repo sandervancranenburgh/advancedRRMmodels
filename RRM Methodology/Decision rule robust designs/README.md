@@ -3,7 +3,7 @@
 <h2 class="font_5 wixui-rich-text__text">&nbsp;</h2>
 <h2 class="font_5 wixui-rich-text__text"><span class="wixui-rich-text__text">Create your own decision rule robust experimental design!</span></h2>
 <p class="font_8 wixui-rich-text__text">I&nbsp;have created a software tool&nbsp; -called Robust Design Generator (RDG)-&nbsp;for creating efficient designs optimised for regret minimisation, utility maximisation, or both, see the screen shot below.&nbsp;A&nbsp;recent&nbsp;<span class="wixui-rich-text__text"><a class="wixui-rich-text__text" href="https://www.sciencedirect.com/science/article/pii/S1755534518300940" target="_blank" rel="noopener">paper</a></span>&nbsp;by Andrew Collins and me explains&nbsp;how to generate designs using this tool.&nbsp;</p>
-<p class="font_8 wixui-rich-text__text">&nbsp;</p>
+<p><img src="https://github.com/sandervancranenburgh/advancedRRMmodels/blob/main/RRM%20Methodology/Decision%20rule%20robust%20designs/DecisionRule.png" alt="" /></p>
 <h2 class="font_5 wixui-rich-text__text"><span class="wixui-rich-text__text">Installation</span></h2>
 <p class="font_8 wixui-rich-text__text">There are 2 ways to use the Robust Design Generator tool:</p>
 <p class="font_8 wixui-rich-text__text">As a MATLAB app, which runs within the MATLAB environment. Advantages of using the Matlab app are that it allows the analyst to extend and build upon the software code and that it is very easy to install. This approach requires the analyst to have installed MATLAB R2017 (or higher).&nbsp;</p>
