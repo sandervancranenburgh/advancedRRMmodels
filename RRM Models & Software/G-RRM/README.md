@@ -1,1 +1,21 @@
-include description
+<h1 class="font_6 wixui-rich-text__text" style="text-align: center;"><span class="wixui-rich-text__text">The G-RRM model</span></h1>
+<div id="bgLayers_comp-la7woksn" class="MW5IWV" data-hook="bgLayers">&nbsp;</div>
+<p class="font_8 wixui-rich-text__text">This model is very recently proposed by&nbsp;<span class="wixui-rich-text__text"><a class="wixui-rich-text__text" href="http://www.sciencedirect.com/science/article/pii/S0191261514001167" target="_blank" rel="noopener">Chorus 2014</a></span>. This model generalises the RRM2010 model, and has - just as the &micro;RRM model - beside the RRM2010 model also the linear-additive RUM model as a special case.</p>
+<p class="font_8 wixui-rich-text__text">In the G-RRM model the fixed constant of one in the attribute level regret function of the RRM2010 model is replaced by a regret-weight variable denoted &gamma;, see the equation below. &gamma; can be estimated for each attribute seperately, or one can estimate the model using one generic &gamma;.</p>
+<p class="font_8 wixui-rich-text__text">The figure on the right shows the effect of the size of&nbsp;&gamma; on the attribute level regret function. As can be seen, a &gamma; = 1 results in the Classical RRM model. As &gamma; gradually increases the attribute level regret function becomes less convex. In the special case in which &gamma; = 0, the G-RRM model predicts the same choice behaviour as the linear-additive RUM model.</p>
+<p class="font_8 wixui-rich-text__text">&nbsp;</p>
+<h3 class="font_7 wixui-rich-text__text" dir="ltr">MATLAB</h3>
+<p class="font_8 wixui-rich-text__text" dir="ltr">Click&nbsp;<span class="wixui-rich-text__text"><a class="wixui-rich-text__text" href="https://github.com/sandervancranenburgh/advancedRRMmodels/tree/main/RRM%20Models%20%26%20Software/G-RRM/MATLAB" target="_blank" rel="noopener">here</a></span>&nbsp;for a bundle of MATLAB codes, which includes code to estimate G-RRM-MNL models</p>
+<h3 class="font_7 wixui-rich-text__text" dir="ltr">BISON BIOGEME&nbsp;</h3>
+<p class="font_8 wixui-rich-text__text" dir="ltr">Click&nbsp;<span class="wixui-rich-text__text"><a class="wixui-rich-text__text" href="https://github.com/sandervancranenburgh/advancedRRMmodels/tree/main/RRM%20Models%20%26%20Software/G-RRM/BISON%20BIOGEME" target="_blank" rel="noopener">here</a></span>&nbsp;for BISON BIOGEME G-RRM estimation code to estimate shopping choice data.</p>
+<h3 class="font_7 wixui-rich-text__text" dir="ltr">PYTHON BIOGEME</h3>
+<p class="font_8 wixui-rich-text__text" dir="ltr">Click&nbsp;<span class="wixui-rich-text__text"><a class="wixui-rich-text__text" href="https://github.com/sandervancranenburgh/advancedRRMmodels/tree/main/RRM%20Models%20%26%20Software/G-RRM/PYTHON%20BIOGEME" target="_blank" rel="noopener">here</a></span>&nbsp;for PYTHON BIOGEME G-RRM estimation code to estimate shopping choice data.</p>
+<h3 class="font_7 wixui-rich-text__text" dir="ltr">PANDAS BIOGEME</h3>
+<p class="font_8 wixui-rich-text__text" dir="ltr">Click&nbsp;<span class="wixui-rich-text__text"><a class="wixui-rich-text__text" href="https://github.com/sandervancranenburgh/advancedRRMmodels/tree/main/RRM%20Models%20%26%20Software/G-RRM/PANDAS%20BIOGEME" target="_blank" rel="noopener">here</a></span>&nbsp;for PANDAS BIOGEME G-RRM estimation code to estimate shopping choice data.</p>
+<h3 class="font_8 wixui-rich-text__text">Apollo R</h3>
+<p class="font_8 wixui-rich-text__text" dir="ltr">Click&nbsp;<span class="wixui-rich-text__text"><a class="wixui-rich-text__text" href="https://github.com/sandervancranenburgh/advancedRRMmodels/tree/main/RRM%20Models%20%26%20Software/G-RRM/Apollo%20R" target="_blank" rel="noopener">here</a></span>&nbsp;for Apollo R&nbsp;G-RRM estimation code to estimate shopping choice data.</p>
+<h3 class="font_8 wixui-rich-text__text">EXAMPLE DATA FILE</h3>
+<p class="font_8 wixui-rich-text__text" dir="ltr">Click&nbsp;<span class="wixui-rich-text__text"><a class="wixui-rich-text__text" href="https://github.com/sandervancranenburgh/advancedRRMmodels/tree/main/RRM%20Models%20%26%20Software/G-RRM/EXAMPLE%20DATA" target="_blank" rel="noopener">here</a></span>&nbsp;to download the example shopping choice data file&nbsp;(see&nbsp;<span class="wixui-rich-text__text"><a class="wixui-rich-text__text" href="http://journals.ama.org/doi/abs/10.1509/jmkr.42.1.109.56884" target="_blank" rel="noopener">Arentze et al. 2005</a></span>&nbsp;for more details on the data)</p>
+</div>
+</div>
+</div>include description
