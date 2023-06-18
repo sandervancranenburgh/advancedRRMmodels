@@ -19,4 +19,4 @@
 <p class="font_8 wixui-rich-text__text" dir="ltr">Click&nbsp;<span class="wixui-rich-text__text"><a class="wixui-rich-text__text" href="https://github.com/sandervancranenburgh/advancedRRMmodels/tree/main/RRM%20Models%20%26%20Software/G-RRM/EXAMPLE%20DATA" target="_blank" rel="noopener">here</a></span>&nbsp;to download the example shopping choice data file&nbsp;(see&nbsp;<span class="wixui-rich-text__text"><a class="wixui-rich-text__text" href="http://journals.ama.org/doi/abs/10.1509/jmkr.42.1.109.56884" target="_blank" rel="noopener">Arentze et al. 2005</a></span>&nbsp;for more details on the data)</p>
 </div>
 </div>
-</div>include description
+
