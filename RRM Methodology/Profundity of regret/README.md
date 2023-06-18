@@ -1,1 +1,22 @@
-include description
+<div id="bgLayers_comp-la7woksr" class="MW5IWV" data-hook="bgLayers">
+<h1 id="bgMedia_comp-la7woksr" class="VgO9Yg" style="text-align: center;">A measure of profundity of regret</h1>
+</div>
+<div class="" data-mesh-id="comp-la7woksrinlineContent" data-testid="inline-content">
+<div data-mesh-id="comp-la7woksrinlineContent-gridContainer" data-testid="mesh-container-content">
+<div id="i20c3wy9" class="BaOVQ8 tz5f0K i20c3wy9 wixui-rich-text" data-testid="richTextElement">
+<p class="font_8 wixui-rich-text__text"><span class="wixui-rich-text__text">The degree of regret minimization behaviour imposed by the Classical RRM or the &micro;RRM model (or profundity of regret) is not constant, but depends on the size of the estimated parameter as well as on the distribution of the attribute levels in the&nbsp;</span>data. Therefore, the parameter estimates on their own are not very informative for the imposed behaviour by the Classical RRM or &micro;RRM model.</p>
+<p class="font_8 wixui-rich-text__text">To acquire insight on the behaviour imposed by these two RRM models, a measure is recently proposed (<span class="wixui-rich-text__text"><a class="wixui-rich-text__text" href="http://www.sciencedirect.com/science/article/pii/S0965856415000166" target="_blank" rel="noopener">Cranenburgh et al. 2015</a></span>). With this measure it is possible to pinpoint the overall degree of regret behaviour for each attribute. The equation below shows how to compute this measure for attribute&nbsp;<span class="wixui-rich-text__text">m</span>, where |<span class="wixui-rich-text__text">Am</span>| denotes the cardinality&nbsp;<span class="wixui-rich-text__text">Am</span><span class="wixui-rich-text__text">,</span>&nbsp;<span class="wixui-rich-text__text">&szlig;m</span>&nbsp;denotes the estimated taste parameter associated with attribute&nbsp;<span class="wixui-rich-text__text">m</span>, and&nbsp;<span class="wixui-rich-text__text">&mu;</span>&nbsp;denotes the scale of the error term &epsilon; (which equals one for the classical RRM model).</p>
+<p class="font_8 wixui-rich-text__text">&nbsp;</p>
+<p class="font_8 wixui-rich-text__text">When all attribute differences&nbsp;<span class="wixui-rich-text__text">xjmn&nbsp;&ndash; ximn</span>&nbsp;are non-zero, and all choice sets contain the same number of alternatives, denoted&nbsp;<span class="wixui-rich-text__text">J</span>, then we can write the equation as follows, where&nbsp;<span class="wixui-rich-text__text">N</span>&nbsp;denotes the total number of choice observations (given that we have one choice observation per decision makers).</p>
+<p class="font_8 wixui-rich-text__text">To compute the measure of profundity is easier than it looks at first sight. You can even compute it easily in MS Excel. Below you can find a bit of Matlab code to compute profundity of regret. For those not familiar with Matlab I also included an MS Excel sheet.</p>
+<p class="font_8 wixui-rich-text__text">&nbsp;</p>
+<h3 class="font_7 wixui-rich-text__text" dir="ltr">MATLAB</h3>
+<p class="font_7 wixui-rich-text__text" dir="ltr">Click&nbsp;<span class="wixui-rich-text__text"><a class="wixui-rich-text__text" href="https://github.com/sandervancranenburgh/advancedRRMmodels/tree/main/RRM%20Methodology/Profundity%20of%20regret/MATLAB" target="_blank" rel="noopener">here</a></span>&nbsp;for a bundle of MATLAB codes, which includes code to compute profundity of regret</p>
+<h3 class="font_7 wixui-rich-text__text">EXCEL</h3>
+<p class="font_8 wixui-rich-text__text">Click&nbsp;<span class="wixui-rich-text__text"><a class="wixui-rich-text__text" href="https://github.com/sandervancranenburgh/advancedRRMmodels/tree/main/RRM%20Methodology/Profundity%20of%20regret/MATLAB" target="_blank" rel="noopener">here</a></span>&nbsp;to download an example Excel sheet to see how to compute profundity of regret</p>
+<p class="font_8 wixui-rich-text__text"><span class="wixGuard wixui-rich-text__text">​</span></p>
+<p class="font_7 wixui-rich-text__text">FURTHER READING</p>
+<p class="font_8 wixui-rich-text__text"><span class="wixui-rich-text__text"><a class="wixui-rich-text__text" href="http://www.sciencedirect.com/science/article/pii/S0965856415000166" target="_blank" rel="noopener">Van Cranenburgh, S., Guevara, C.A. &amp; Chorus, C.G. (2015)</a></span>&nbsp; &ldquo;New Insights on Random Regret Minimization Models&rdquo;.&nbsp;<span class="wixui-rich-text__text">Transportation Research Part A: Policy and Practice</span>&nbsp;(74) pp 91-109.</p>
+</div>
+</div>
+</div>
