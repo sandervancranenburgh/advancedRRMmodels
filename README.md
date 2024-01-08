@@ -2,12 +2,12 @@
 
  Sander van Cranenburgh - Associate Professor Delft University of Technology.
  
-| [Home]() | [RRM models & software](https://github.com/sandervancranenburgh/advancedRRMmodels/tree/main/RRM%20Models%20%26%20Software) | [More RRM methodoly](/RRM%20Methodology)  | [Publications](https://github.com/sandervancranenburgh/advancedRRMmodels/tree/main/Publications) | [MSc projects](https://github.com/sandervancranenburgh/advancedRRMmodels) | [About](https://www.tudelft.nl/tbm/onze-faculteit/engineering-systems-and-services/people/associate-professors/drir-s-sander-van-cranenburgh?0%5BL%5D=&cHash=b2ae04d80d909091b5ba2f09e70b0448) | [More](https://github.com/sandervancranenburgh/advancedRRMmodels)
+| [Home]() | [RRM models & software](/tree/main/RRM%20Models%20%26%20Software) | [More RRM methodology](/RRM%20Methodology)  | [Publications](/tree/main/Publications) | [MSc projects](https://github.com/sandervancranenburgh/advancedRRMmodels) | [About](https://www.tudelft.nl/tbm/onze-faculteit/engineering-systems-and-services/people/associate-professors/drir-s-sander-van-cranenburgh?0%5BL%5D=&cHash=b2ae04d80d909091b5ba2f09e70b0448) | [More](https://github.com/sandervancranenburgh/advancedRRMmodels)
 --|--|--|--|--|--|--
 
 Hi all,
 
-Welcome to my website. Often I encounter new models or estimation techniques in the scholarly literature which are potentially useful for me. However, the burden to code that new model can be high: it simply requires time. With this website I hope to lower that burden for  researchers  and  practitioners interested to see whether recent RRM models and methods can be useful for them.
+Welcome to my website. Often, I encounter new models or estimation techniques in the scholarly literature that are potentially useful for me. However, the burden to code that new model can be high: it simply requires time. With this website I hope to lower that burden for  researchers  and  practitioners interested to see whether recent RRM models and methods can be useful for them.
 
 Under the tab |[RRM models & Software](https://github.com/sandervancranenburgh/advancedRRMmodels/RRM%20models%20%26%20Software)| you can find code to estimate:
 
