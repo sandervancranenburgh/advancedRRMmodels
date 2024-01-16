@@ -23,4 +23,4 @@
 <p class="font_8 wixui-rich-text__text">1) a two-class model comprising of a RUM class and a P-RRM class.</p>
 <p class="font_8 wixui-rich-text__text">2) a two-class model comprising of two &mu;RRM classes.</p>
 <p class="font_8 wixui-rich-text__text">3) a three-class model comprising of a RUM class, a P-RRM class and a &mu;RRM class.</p>
-<p class="font_8 wixui-rich-text__text" dir="ltr">Click <a href="https://github.com/sandervancranenburgh/advancedRRMmodels/tree/main/RRM%20Models%20%26%20Software/Latent%20class%20models">here</a> to go to the Latent class software page.</p>
+<p class="font_8 wixui-rich-text__text" dir="ltr">Click <a href="https://github.com/sandervancranenburgh/advancedRRMmodels/tree/main/Source/RRM%20Models%20%26%20Software/Latent%20class%20models">here</a> to go to the Latent class software page.</p>
