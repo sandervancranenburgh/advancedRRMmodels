@@ -1,18 +1,21 @@
 ########################################
 #
 # @file LC_muRRM_2classes.py
-# @author: Sander van Cranenburgh & José Hernández
-# @date: 06/08/2019
+# @author: Sander van Cranenburgh, José Hernández & Gabriel Nova
+# @date: 01/01/2024
 #
 #######################################
 print("Start estimation of Latent Class muRRM model (two classes)")
 print(" ")
 
 import pandas as pd
+from biogeme.expressions import Beta, DefineVariable,Variable, log,exp,MonteCarlo, PanelLikelihoodTrajectory
 import biogeme.database as db
 import biogeme.biogeme as bio
-import biogeme.models as models
+from biogeme import models
+from statistics import *
 import os
+import numpy as np
 
 import warnings
 warnings.filterwarnings('error')
@@ -23,85 +26,107 @@ database = db.Database("Shopping",dat)
 
 database.panel("ID")
 
-from headers import *
+
+# Create variables FSG1 to FSG5
+FSG1 = Variable('FSG1')
+FSG2 = Variable('FSG2')
+FSG3 = Variable('FSG3')
+FSG4 = Variable('FSG4')
+FSG5 = Variable('FSG5')
+
+# Create variables FSO1 to FSO5
+FSO1 = Variable('FSO1')
+FSO2 = Variable('FSO2')
+FSO3 = Variable('FSO3')
+FSO4 = Variable('FSO4')
+FSO5 = Variable('FSO5')
+
+# Create variables TT1 to TT5
+TT1 = Variable('TT1')
+TT2 = Variable('TT2')
+TT3 = Variable('TT3')
+TT4 = Variable('TT4')
+TT5 = Variable('TT5')
+
+CHOICE = Variable('CHOICE')
 
 # Floorspace Groceries
-FSG2_1 = DefineVariable('FSG2_1', ( FSG2 - FSG1 ) / 1000,database)
-FSG3_1 = DefineVariable('FSG3_1', ( FSG3 - FSG1 ) / 1000,database)
-FSG4_1 = DefineVariable('FSG4_1', ( FSG4 - FSG1 ) / 1000,database)
-FSG5_1 = DefineVariable('FSG5_1', ( FSG5 - FSG1 ) / 1000,database)
+FSG2_1 = database.DefineVariable('FSG2_1', ( FSG2 -FSG1 ) / 1000)
+FSG3_1 = database.DefineVariable('FSG3_1', ( FSG3 - FSG1 ) / 1000)
+FSG4_1 = database.DefineVariable('FSG4_1', ( FSG4 - FSG1 ) / 1000)
+FSG5_1 = database.DefineVariable('FSG5_1', ( FSG5 - FSG1 ) / 1000)
 
-FSG1_2 = DefineVariable('FSG1_2', ( FSG1 - FSG2 ) / 1000,database)
-FSG3_2 = DefineVariable('FSG3_2', ( FSG3 - FSG2 ) / 1000,database)
-FSG4_2 = DefineVariable('FSG4_2', ( FSG4 - FSG2 ) / 1000,database)
-FSG5_2 = DefineVariable('FSG5_2', ( FSG5 - FSG2 ) / 1000,database)
+FSG1_2 = database.DefineVariable('FSG1_2', ( FSG1 - FSG2 ) / 1000)
+FSG3_2 = database.DefineVariable('FSG3_2', ( FSG3 - FSG2 ) / 1000)
+FSG4_2 = database.DefineVariable('FSG4_2', ( FSG4 - FSG2 ) / 1000)
+FSG5_2 = database.DefineVariable('FSG5_2', ( FSG5 - FSG2 ) / 1000)
 
-FSG1_3 = DefineVariable('FSG1_3', ( FSG1 - FSG3 ) / 1000,database)
-FSG2_3 = DefineVariable('FSG2_3', ( FSG2 - FSG3 ) / 1000,database)
-FSG4_3 = DefineVariable('FSG4_3', ( FSG4 - FSG3 ) / 1000,database)
-FSG5_3 = DefineVariable('FSG5_3', ( FSG5 - FSG3 ) / 1000,database)
+FSG1_3 = database.DefineVariable('FSG1_3', ( FSG1 - FSG3 ) / 1000)
+FSG2_3 = database.DefineVariable('FSG2_3', ( FSG2 - FSG3 ) / 1000)
+FSG4_3 = database.DefineVariable('FSG4_3', ( FSG4 - FSG3 ) / 1000)
+FSG5_3 = database.DefineVariable('FSG5_3', ( FSG5 - FSG3 ) / 1000)
 
-FSG1_4 = DefineVariable('FSG1_4', ( FSG1 - FSG4 ) / 1000,database)
-FSG2_4 = DefineVariable('FSG2_4', ( FSG2 - FSG4 ) / 1000,database)
-FSG3_4 = DefineVariable('FSG3_4', ( FSG3 - FSG4 ) / 1000,database)
-FSG5_4 = DefineVariable('FSG5_4', ( FSG5 - FSG4 ) / 1000,database)
+FSG1_4 = database.DefineVariable('FSG1_4', ( FSG1 - FSG4 ) / 1000)
+FSG2_4 = database.DefineVariable('FSG2_4', ( FSG2 - FSG4 ) / 1000)
+FSG3_4 = database.DefineVariable('FSG3_4', ( FSG3 - FSG4 ) / 1000)
+FSG5_4 = database.DefineVariable('FSG5_4', ( FSG5 - FSG4 ) / 1000)
 
-FSG1_5 = DefineVariable('FSG1_5', ( FSG1 - FSG5 ) / 1000,database)
-FSG2_5 = DefineVariable('FSG2_5', ( FSG2 - FSG5 ) / 1000,database)
-FSG3_5 = DefineVariable('FSG3_5', ( FSG3 - FSG5 ) / 1000,database)
-FSG4_5 = DefineVariable('FSG4_5', ( FSG4 - FSG5 ) / 1000,database)
+FSG1_5 = database.DefineVariable('FSG1_5', ( FSG1 - FSG5 ) / 1000)
+FSG2_5 = database.DefineVariable('FSG2_5', ( FSG2 - FSG5 ) / 1000)
+FSG3_5 = database.DefineVariable('FSG3_5', ( FSG3 - FSG5 ) / 1000)
+FSG4_5 = database.DefineVariable('FSG4_5', ( FSG4 - FSG5 ) / 1000)
 
 # Floorspace Other
-FSO2_1 = DefineVariable('FSO2_1', ( FSO2 - FSO1 ) / 1000,database)
-FSO3_1 = DefineVariable('FSO3_1', ( FSO3 - FSO1 ) / 1000,database)
-FSO4_1 = DefineVariable('FSO4_1', ( FSO4 - FSO1 ) / 1000,database)
-FSO5_1 = DefineVariable('FSO5_1', ( FSO5 - FSO1 ) / 1000,database)
+FSO2_1 = database.DefineVariable('FSO2_1', ( FSO2 - FSO1 ) / 1000)
+FSO3_1 = database.DefineVariable('FSO3_1', ( FSO3 - FSO1 ) / 1000)
+FSO4_1 = database.DefineVariable('FSO4_1', ( FSO4 - FSO1 ) / 1000)
+FSO5_1 = database.DefineVariable('FSO5_1', ( FSO5 - FSO1 ) / 1000)
 
-FSO1_2 = DefineVariable('FSO1_2', ( FSO1 - FSO2 ) / 1000,database)
-FSO3_2 = DefineVariable('FSO3_2', ( FSO3 - FSO2 ) / 1000,database)
-FSO4_2 = DefineVariable('FSO4_2', ( FSO4 - FSO2 ) / 1000,database)
-FSO5_2 = DefineVariable('FSO5_2', ( FSO5 - FSO2 ) / 1000,database)
+FSO1_2 = database.DefineVariable('FSO1_2', ( FSO1 - FSO2 ) / 1000)
+FSO3_2 = database.DefineVariable('FSO3_2', ( FSO3 - FSO2 ) / 1000)
+FSO4_2 = database.DefineVariable('FSO4_2', ( FSO4 - FSO2 ) / 1000)
+FSO5_2 = database.DefineVariable('FSO5_2', ( FSO5 - FSO2 ) / 1000)
 
-FSO1_3 = DefineVariable('FSO1_3', ( FSO1 - FSO3 ) / 1000,database)
-FSO2_3 = DefineVariable('FSO2_3', ( FSO2 - FSO3 ) / 1000,database)
-FSO4_3 = DefineVariable('FSO4_3', ( FSO4 - FSO3 ) / 1000,database)
-FSO5_3 = DefineVariable('FSO5_3', ( FSO5 - FSO3 ) / 1000,database)
+FSO1_3 = database.DefineVariable('FSO1_3', ( FSO1 - FSO3 ) / 1000)
+FSO2_3 = database.DefineVariable('FSO2_3', ( FSO2 - FSO3 ) / 1000)
+FSO4_3 = database.DefineVariable('FSO4_3', ( FSO4 - FSO3 ) / 1000)
+FSO5_3 = database.DefineVariable('FSO5_3', ( FSO5 - FSO3 ) / 1000)
 
-FSO1_4 = DefineVariable('FSO1_4', ( FSO1 - FSO4 ) / 1000,database)
-FSO2_4 = DefineVariable('FSO2_4', ( FSO2 - FSO4 ) / 1000,database)
-FSO3_4 = DefineVariable('FSO3_4', ( FSO3 - FSO4 ) / 1000,database)
-FSO5_4 = DefineVariable('FSO5_4', ( FSO5 - FSO4 ) / 1000,database)
+FSO1_4 = database.DefineVariable('FSO1_4', ( FSO1 - FSO4 ) / 1000)
+FSO2_4 = database.DefineVariable('FSO2_4', ( FSO2 - FSO4 ) / 1000)
+FSO3_4 = database.DefineVariable('FSO3_4', ( FSO3 - FSO4 ) / 1000)
+FSO5_4 = database.DefineVariable('FSO5_4', ( FSO5 - FSO4 ) / 1000)
 
-FSO1_5 = DefineVariable('FSO1_5', ( FSO1 - FSO5 ) / 1000,database)
-FSO2_5 = DefineVariable('FSO2_5', ( FSO2 - FSO5 ) / 1000,database)
-FSO3_5 = DefineVariable('FSO3_5', ( FSO3 - FSO5 ) / 1000,database)
-FSO4_5 = DefineVariable('FSO4_5', ( FSO4 - FSO5 ) / 1000,database)
+FSO1_5 = database.DefineVariable('FSO1_5', ( FSO1 - FSO5 ) / 1000)
+FSO2_5 = database.DefineVariable('FSO2_5', ( FSO2 - FSO5 ) / 1000)
+FSO3_5 = database.DefineVariable('FSO3_5', ( FSO3 - FSO5 ) / 1000)
+FSO4_5 = database.DefineVariable('FSO4_5', ( FSO4 - FSO5 ) / 1000)
 
 # Travel time
-TT2_1 = DefineVariable('TT2_1', ( TT2 - TT1 ) / 100,database)
-TT3_1 = DefineVariable('TT3_1', ( TT3 - TT1 ) / 100,database)
-TT4_1 = DefineVariable('TT4_1', ( TT4 - TT1 ) / 100,database)
-TT5_1 = DefineVariable('TT5_1', ( TT5 - TT1 ) / 100,database)
+TT2_1 = database.DefineVariable('TT2_1', ( TT2 - TT1 ) / 100)
+TT3_1 = database.DefineVariable('TT3_1', ( TT3 - TT1 ) / 100)
+TT4_1 = database.DefineVariable('TT4_1', ( TT4 - TT1 ) / 100)
+TT5_1 = database.DefineVariable('TT5_1', ( TT5 - TT1 ) / 100)
 
-TT1_2 = DefineVariable('TT1_2', ( TT1 - TT2 ) / 100,database)
-TT3_2 = DefineVariable('TT3_2', ( TT3 - TT2 ) / 100,database)
-TT4_2 = DefineVariable('TT4_2', ( TT4 - TT2 ) / 100,database)
-TT5_2 = DefineVariable('TT5_2', ( TT5 - TT2 ) / 100,database)
+TT1_2 = database.DefineVariable('TT1_2', ( TT1 - TT2 ) / 100)
+TT3_2 = database.DefineVariable('TT3_2', ( TT3 - TT2 ) / 100)
+TT4_2 = database.DefineVariable('TT4_2', ( TT4 - TT2 ) / 100)
+TT5_2 = database.DefineVariable('TT5_2', ( TT5 - TT2 ) / 100)
 
-TT1_3 = DefineVariable('TT1_3', ( TT1 - TT3 ) / 100,database)
-TT2_3 = DefineVariable('TT2_3', ( TT2 - TT3 ) / 100,database)
-TT4_3 = DefineVariable('TT4_3', ( TT4 - TT3 ) / 100,database)
-TT5_3 = DefineVariable('TT5_3', ( TT5 - TT3 ) / 100,database)
+TT1_3 = database.DefineVariable('TT1_3', ( TT1 - TT3 ) / 100)
+TT2_3 = database.DefineVariable('TT2_3', ( TT2 - TT3 ) / 100)
+TT4_3 = database.DefineVariable('TT4_3', ( TT4 - TT3 ) / 100)
+TT5_3 = database.DefineVariable('TT5_3', ( TT5 - TT3 ) / 100)
 
-TT1_4 = DefineVariable('TT1_4', ( TT1 - TT4 ) / 100,database)
-TT2_4 = DefineVariable('TT2_4', ( TT2 - TT4 ) / 100,database)
-TT3_4 = DefineVariable('TT3_4', ( TT3 - TT4 ) / 100,database)
-TT5_4 = DefineVariable('TT5_4', ( TT5 - TT4 ) / 100,database)
+TT1_4 = database.DefineVariable('TT1_4', ( TT1 - TT4 ) / 100)
+TT2_4 = database.DefineVariable('TT2_4', ( TT2 - TT4 ) / 100)
+TT3_4 = database.DefineVariable('TT3_4', ( TT3 - TT4 ) / 100)
+TT5_4 = database.DefineVariable('TT5_4', ( TT5 - TT4 ) / 100)
 
-TT1_5 = DefineVariable('TT1_5', ( TT1 - TT5 ) / 100,database)
-TT2_5 = DefineVariable('TT2_5', ( TT2 - TT5 ) / 100,database)
-TT3_5 = DefineVariable('TT3_5', ( TT3 - TT5 ) / 100,database)
-TT4_5 = DefineVariable('TT4_5', ( TT4 - TT5 ) / 100,database)
+TT1_5 = database.DefineVariable('TT1_5', ( TT1 - TT5 ) / 100)
+TT2_5 = database.DefineVariable('TT2_5', ( TT2 - TT5 ) / 100)
+TT3_5 = database.DefineVariable('TT3_5', ( TT3 - TT5 ) / 100)
+TT4_5 = database.DefineVariable('TT4_5', ( TT4 - TT5 ) / 100)
 
 # Define a vector of ones to be associated to database
 one =  DefineVariable('one',1,database)
