@@ -236,10 +236,7 @@
   justify-content: center;
 }
 .about-link10 {
-  text-decoration: underline;
-}
-.about-link11 {
-  text-decoration: underline;
+  text-decoration: none;
 }
 .about-footer-container {
   width: 100%;
@@ -271,7 +268,7 @@
   width: 24px;
   height: 24px;
 }
-.about-link12 {
+.about-link11 {
   color: rgb(0, 0, 0);
   font-style: normal;
   font-weight: 400;
