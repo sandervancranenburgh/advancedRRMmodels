@@ -1,7 +1,7 @@
 ##############################################
 # file: mu_RRM.R
-# author: Sander van Cranenburgh
-# date: 02/08/2019
+# author: Sander van Cranenburgh - Gabriel Nova
+# date: 03/03/2025
 ##############################################
 
 library(apollo)

@@ -1,7 +1,7 @@
 ##############################################
 # file: LC_RUM_PRRM_muRRM_3classes.R
-# author: Sander van Cranenburgh & Teodora Szep
-# date: 02/08/2019
+# author: Sander van Cranenburgh & Teodora Szep - Gabriel Nova
+# date: 03/03/2025
 ##############################################
 
 library(apollo)
@@ -57,16 +57,12 @@ apollo_lcPars = function(apollo_beta, apollo_inputs){
   V[["class_2"]] = s_2
   V[["class_3"]] = s_3
   
-  ###Settings for class membership probabilities 
-  mnl_settings = list(
-    alternatives = c(class_1=1, class_2=2, class_3=3), 
-    avail        = 1, 
-    choiceVar    = NA, ###No choice variable as only the formula of MNL is used
-    V            = V
+  classAlloc_settings = list(
+    classes      = c(class_1=1, class_2=2, class_3 = 3), 
+    utilities    = V
   )
-  ###Class membership probabilities
-  lcpars[["pi_values"]] = apollo_mnl(mnl_settings, functionality="raw")
-  lcpars[["pi_values"]] = apollo_firstRow(lcpars[["pi_values"]], apollo_inputs)
+  
+  lcpars[["pi_values"]] = apollo_classAlloc(classAlloc_settings)
   return(lcpars)
 }
 
